@@ -1,6 +1,6 @@
 # Atom packages for Oracle Developers
 
-[Atom](atom.io) is a free open source powerful text editor. One of its greatest features is the ability to add packages to enhance its functionality. This document covers recommended packages for Oracled developers that use Atom.
+[Atom](atom.io) is a free open source powerful text editor. One of its greatest features is the ability to add packages to enhance its functionality. This document covers recommended packages for Oracle developers that use Atom.
 
 
 Package | Description
