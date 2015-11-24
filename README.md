@@ -23,3 +23,23 @@ Once installed, the language will automatically pickup the grammar when opening 
 This package provides a symbols/class view on the right hand side of your text editor. Clicking on any symbol will take you to that position in the code.
 
 ![](https://cloud.githubusercontent.com/assets/1747643/11354004/62272df6-929c-11e5-89a4-adc802e6349c.png)
+
+## minimap
+
+Gives a zoomed out view of the code, on either the left or right hand side of the file that you can drag to scroll to a specific portion of the code.
+
+![](https://cloud.githubusercontent.com/assets/1747643/11354495/f057cc2c-929f-11e5-8d31-d7252f001ec9.png)
+
+## file-icons
+
+Adds icons specific to a files extension - just to add a bit of eye candy, and one more visual recognition of the file type. The icons are based on FontAwesome (and derivative(s)) fonts.
+
+As a little example, before using this package:
+
+![](https://cloud.githubusercontent.com/assets/1747643/11354338/d6529614-929e-11e5-9bb9-b7325e5aaaf2.png)
+
+and after:
+
+![](https://cloud.githubusercontent.com/assets/1747643/11354347/e8358f62-929e-11e5-832c-a4b085ec07b6.png)
+
+note: The icon on `foo.pks` in the screenshot above hasn't yet made it into the package - but gives an idea of what is possible
