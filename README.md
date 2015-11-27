@@ -10,6 +10,7 @@ Package                                   | Description
 [`symbols-tree-view`](#symbols-tree-view) | Quick links to procedures and functions in a package (_Note: PL/SQL integration still in development)_
 [`minimap`](#minimap)                     | A preview of the full source code and quick scrolling through file
 [`file-icons`](#file-icons)               | Adds file specific icons to atom for improved visualization
+[`atom-aligntment`](#atom-alignment)      | Aligns multiple lines of assignment operators
 
 ## [project-manager](https://atom.io/packages/project-manager)
 
@@ -95,3 +96,123 @@ and after:
 ![](https://cloud.githubusercontent.com/assets/1747643/11354347/e8358f62-929e-11e5-832c-a4b085ec07b6.png)
 
 note: The icon on `foo.pks` in the screenshot above hasn't yet made it into the package - but gives an idea of what is possible
+
+## [atom-alignment](https://atom.io/packages/atom-alignment)
+
+Based on a given selection of text, this will align all assignment operators which can aid in making the code more readable. The key bindings are `ctrl+alt+A` or `ctrl+cmd+A`. Best demonstrated with an example. So first you need to highlight any text where assignment operators occur, then run the aforementioned key bindings.
+
+Example 1: Just the package call
+
+Before:
+
+```plsql
+declare
+    l_short_field NUMBER;
+    l_really_really_long_field NUMBER;
+begin
+
+    l_short_field := 1;
+    l_really_really_long_field := 999;
+
+    field_updater.get_ready_for_update;
+
+    field_updater.update_details(
+        l_short_field => l_short_field
+      , l_really_really_long_field => l_really_really_long_field
+    );
+
+end;
+/
+```
+
+After:
+
+```plsql
+declare
+    l_short_field NUMBER;
+    l_really_really_long_field NUMBER;
+begin
+
+    l_short_field := 1;
+    l_really_really_long_field := 999;
+
+    field_updater.get_ready_for_update;
+
+    field_updater.update_details(
+        l_short_field              => l_short_field
+      , l_really_really_long_field => l_really_really_long_field
+    );
+
+end;
+/
+```
+
+Example 2: The whole package
+
+```plsql
+declare
+    l_short_field NUMBER;
+    l_really_really_long_field NUMBER;
+begin
+
+    l_short_field := 1;
+    l_really_really_long_field := 999;
+
+    field_updater.get_ready_for_update;
+
+    field_updater.update_details(
+        l_short_field => l_short_field
+      , l_really_really_long_field => l_really_really_long_field
+    );
+
+end;
+/
+```
+
+After:
+
+```
+declare
+    l_short_field NUMBER;
+    l_really_really_long_field NUMBER;
+begin
+
+    l_short_field              := 1;
+    l_really_really_long_field := 999;
+
+    field_updater.get_ready_for_update;
+
+    field_updater.update_details(
+        l_short_field              => l_short_field
+      , l_really_really_long_field => l_really_really_long_field
+    );
+
+end;
+/
+```
+
+One change I did make, was to clear one of the settings `Add Space Postfix`.
+
+![](https://cloud.githubusercontent.com/assets/1747643/11433471/c894e9da-9511-11e5-94e0-35e06826319d.png)
+
+If that is left enabled, the previous block would have come out as:
+
+```plsql
+declare
+    l_short_field NUMBER;
+    l_really_really_long_field NUMBER;
+begin
+
+    l_short_field              := 1;
+    l_really_really_long_field := 999;
+
+    field_updater.get_ready_for_update;
+
+    field_updater.update_details(
+        l_short_field              = > l_short_field
+      , l_really_really_long_field = > l_really_really_long_field
+    );
+
+end;
+/
+```
