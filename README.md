@@ -5,10 +5,49 @@
 
 Package                                                           | Description
 ----------------------------------------------------------------- | -------------------------
+[`project-manager`](https://atom.io/packages/project-manager)      | Allows easy access and quickly switching between projects in Atom
 [`language-oracle`](https://atom.io/packages/language-oracle)     | Language specific syntax highlighting for Oracle developers
 [`symbols-tree-view`](https://atom.io/packages/symbols-tree-view) | Quick links to procedures and functions in a package (_Note: PL/SQL integration still in development)_
 [`minimap`](https://atom.io/packages/minimap)                     | A preview of the full source code and quick scrolling through file
 [`file-icons`](https://atom.io/packages/file-icons)               | Adds file specific icons to atom for improved visualization
+
+## project-manager
+
+This allows you to set up a configuration of your active projects so that you can quickly switch between them. The configuration for this is a `cson` file located in your atom user directory - `$HOME/.atom/projects.cson` most typically. You can quickly access it by opening the command palette (`ctrl+shift+p`) and searching for `Edit projects`.
+
+![](https://cloud.githubusercontent.com/assets/1747643/11432340/58a546b2-9500-11e5-8026-d44fa9b0c798.png)
+
+Then, for each project you define properties such as `title`, `paths`, `icon` and `settings` - there are others, which you can read about on the packages README.
+
+To get your project added without manually filling out the properties, you can search for `Save Project` in the command palette and it will prompt you for the name of the project, which adds the entries for `title` and `paths` in the project configuration file.
+
+So for example, I have one project set up for my Atom user directory, as:
+
+```cson
+atomConfig:
+  title: "Atom user directory"
+  paths: [
+    "/home/trent/.atom"
+  ]
+  icon: "icon-tools"
+  settings:
+    "*":
+      "editor.tabLength": 2
+```
+
+This means I can quickly open this project by hitting `alt+shift+P` and searching for `atom user directory`.
+
+![](https://cloud.githubusercontent.com/assets/1747643/11432417/1d6b2cd6-9502-11e5-84a1-cd0137508814.png)
+
+Any settings you can apply system wide, you can also apply in the project configuration, with `*` being the wild card for all file types. You could alternatively have specific settings for specific language scopes. For instance, in the documentation, it has the example:
+
+```cson
+'.source.coffee':
+  'editor.tabLength': 2
+  'editor.preferredLineLength': 80
+```
+
+If you look at the grammar [specification](https://github.com/atom/language-coffee-script/blob/master/grammars/coffeescript.cson) for CoffeeScript, you will see it's defined the `scopeName` as `source.coffee` which is why the above setting is mapped to `.source.coffee`.
 
 ## language-oracle
 
@@ -23,6 +62,8 @@ Once installed, the language will automatically pickup the grammar when opening 
 This package provides a symbols/class view on the right hand side of your text editor. Clicking on any symbol will take you to that position in the code.
 
 ![](https://cloud.githubusercontent.com/assets/1747643/11354004/62272df6-929c-11e5-89a4-adc802e6349c.png)
+
+The pane get easily be toggled on and off with the keyboard shortcut `ctrl+alt+o`.
 
 ## minimap
 
