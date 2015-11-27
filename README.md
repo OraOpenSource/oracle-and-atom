@@ -1,17 +1,17 @@
 # Atom packages for Oracle Developers
 
-[Atom](atom.io) is a free open source powerful text editor. One of its greatest features is the ability to add packages to enhance its functionality. This document covers recommended packages for Oracle developers that use Atom.
+[Atom](https://atom.io/) is a free open source powerful text editor. One of its greatest features is the ability to add packages to enhance its functionality. This document covers recommended packages for Oracle developers that use Atom.
 
 
-Package                                                           | Description
------------------------------------------------------------------ | -------------------------
-[`project-manager`](https://atom.io/packages/project-manager)      | Allows easy access and quickly switching between projects in Atom
-[`language-oracle`](https://atom.io/packages/language-oracle)     | Language specific syntax highlighting for Oracle developers
-[`symbols-tree-view`](https://atom.io/packages/symbols-tree-view) | Quick links to procedures and functions in a package (_Note: PL/SQL integration still in development)_
-[`minimap`](https://atom.io/packages/minimap)                     | A preview of the full source code and quick scrolling through file
-[`file-icons`](https://atom.io/packages/file-icons)               | Adds file specific icons to atom for improved visualization
+Package                                   | Description
+----------------------------------------- | -------------------------
+[`project-manager`](#project-manager)     | Allows easy access and quickly switching between projects in Atom
+[`language-oracle`](#language-oracle)     | Language specific syntax highlighting for Oracle developers
+[`symbols-tree-view`](#symbols-tree-view) | Quick links to procedures and functions in a package (_Note: PL/SQL integration still in development)_
+[`minimap`](#minimap)                     | A preview of the full source code and quick scrolling through file
+[`file-icons`](#file-icons)               | Adds file specific icons to atom for improved visualization
 
-## project-manager
+## [project-manager](https://atom.io/packages/project-manager)
 
 This allows you to set up a configuration of your active projects so that you can quickly switch between them. The configuration for this is a `cson` file located in your atom user directory - `$HOME/.atom/projects.cson` most typically. You can quickly access it by opening the command palette (`ctrl+shift+p`) and searching for `Edit projects`.
 
@@ -49,7 +49,7 @@ Any settings you can apply system wide, you can also apply in the project config
 
 If you look at the grammar [specification](https://github.com/atom/language-coffee-script/blob/master/grammars/coffeescript.cson) for CoffeeScript, you will see it's defined the `scopeName` as `source.coffee` which is why the above setting is mapped to `.source.coffee`.
 
-## language-oracle
+## [language-oracle](https://atom.io/packages/language-oracle)
 
 This is the grammar for PL/SQL code, and includes all relevant syntax highlights, as well as snippets for common code blocks such as `loops`, `if then else` etc.
 
@@ -57,7 +57,7 @@ Once installed, the language will automatically pickup the grammar when opening 
 
 ![](https://cloud.githubusercontent.com/assets/1747643/11353907/74f00ca6-929b-11e5-89f1-4a52dca44787.png)
 
-## symbols-tree-view
+## [symbols-tree-view](https://atom.io/packages/symbols-tree-view)
 
 This package provides a symbols/class view on the right hand side of your text editor. Clicking on any symbol will take you to that position in the code.
 
@@ -65,13 +65,13 @@ This package provides a symbols/class view on the right hand side of your text e
 
 The pane get easily be toggled on and off with the keyboard shortcut `ctrl+alt+o`.
 
-## minimap
+## [minimap](https://atom.io/packages/minimap)
 
 Gives a zoomed out view of the code, on either the left or right hand side of the file that you can drag to scroll to a specific portion of the code.
 
 ![](https://cloud.githubusercontent.com/assets/1747643/11354495/f057cc2c-929f-11e5-8d31-d7252f001ec9.png)
 
-## file-icons
+## [file-icons](https://atom.io/packages/file-icons)
 
 Adds icons specific to a files extension - just to add a bit of eye candy, and one more visual recognition of the file type. The icons are based on FontAwesome (and derivative(s)) fonts.
 
