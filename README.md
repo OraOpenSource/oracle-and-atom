@@ -39,6 +39,8 @@ This means I can quickly open this project by hitting `alt+shift+P` and searchin
 
 ![](https://cloud.githubusercontent.com/assets/1747643/11432417/1d6b2cd6-9502-11e5-84a1-cd0137508814.png)
 
+### Settings
+
 Any settings you can apply system wide, you can also apply in the project configuration, with `*` being the wild card for all file types. You could alternatively have specific settings for specific language scopes. For instance, in the documentation, it has the example:
 
 ```cson
@@ -48,6 +50,15 @@ Any settings you can apply system wide, you can also apply in the project config
 ```
 
 If you look at the grammar [specification](https://github.com/atom/language-coffee-script/blob/master/grammars/coffeescript.cson) for CoffeeScript, you will see it's defined the `scopeName` as `source.coffee` which is why the above setting is mapped to `.source.coffee`.
+
+## Icon
+
+The icons you can use against your projects are based on [GitHub Octicons](https://octicons.github.com/). For example, on the Atom user directory project I set up earlier, I specified the icon as `icon-tools`. If you look at the grid of icons, you will find that particular icon towards the bottom.
+
+Clicking onto will give you the class name as `octicon-tools`. So in our project settings, we use that same class name, only replacing `octicon` with `icon` - thus becoming `icon-tools`.
+
+
+![](https://cloud.githubusercontent.com/assets/1747643/11433288/1e8bdaea-950f-11e5-9fec-de144f7ba02a.png)
 
 ## [language-oracle](https://atom.io/packages/language-oracle)
 
