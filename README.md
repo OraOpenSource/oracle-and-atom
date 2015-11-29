@@ -99,7 +99,9 @@ note: The icon on `foo.pks` in the screenshot above hasn't yet made it into the 
 
 ## [atom-alignment](https://atom.io/packages/atom-alignment)
 
-Based on a given selection of text, this will align all assignment operators which can aid in making the code more readable. The key bindings are `ctrl+alt+A` or `ctrl+cmd+A`. Best demonstrated with an example. So first you need to highlight any text where assignment operators occur, then run the aforementioned key bindings.
+Some developers prefer assignment operators in a given block to be aligned over multiple lines so that all assignment values begin at the same point. If you are one of those people, this package solves that by allowing you to highlight a section of code, and applying the alignment.
+
+The key bindings are `ctrl+alt+A` or `ctrl+cmd+A`. Best demonstrated with an example. So first you need to highlight any text where assignment operators occur, then run the aforementioned key bindings (or by selecting form the menu option, `Packages->atom-alignment`).
 
 Example 1: Just the package call
 
