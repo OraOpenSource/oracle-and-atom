@@ -11,6 +11,7 @@ Package                                   | Description
 [`minimap`](#minimap)                     | A preview of the full source code and quick scrolling through file
 [`file-icons`](#file-icons)               | Adds file specific icons to atom for improved visualization
 [`atom-aligntment`](#atom-alignment)      | Aligns multiple lines of assignment operators
+[`build-oracle`](#build-oracle)         | Compiles oracle scripts
 
 ## [project-manager](https://atom.io/packages/project-manager)
 
@@ -218,3 +219,34 @@ begin
 end;
 /
 ```
+
+## [build-oracle](https://github.com/tschf/atom-build-oracle)
+
+This extension allows you to compile your Oracle scripts against the database. It does this be expanding on the `build` package, which is a generic extension for building on a variety of languages/platforms.
+
+After you install, to start building against your database you need to set up a configuration (json) file, named `.atom-build-oracle.json`. The first time you add the configuration, you will need to reload Atom for the build targets to be recognised. This configuration expects an array of objects with two fields: `targetName` and `connectString`.
+
+For example, if I want two build targets against the `hr` schema, my configuration file will look like:
+
+```
+[
+    {
+        "targetName" : "HR_DEV",
+        "connectString" : "hr/hr@ORCLDEV"
+    },
+    {
+        "targetName" : "HR_PRD",
+        "connectString" : "hr/hr@ORCLPRD"
+    }
+]
+```
+
+With this applied, in the bottom left corner of your screen (in the status bar), you will see the build target of the first one defined in the config. Clicking on that will then bring up a list of targets at the top of the screen that you can click on to compile the active file against that connection.
+
+![image](https://cloud.githubusercontent.com/assets/1747643/24751026/6d917fcc-1b0b-11e7-9342-0a5a114a8753.png)
+
+![image](https://cloud.githubusercontent.com/assets/1747643/24751041/7df321cc-1b0b-11e7-92d6-34da10a7c185.png)
+
+Alternatively, you can hit the (default) key binding `ctrl+alt+b` to compile against the active build target.
+
+This project depends on SQL*Plus (or SQLcl), so for further set up instructions, it is worth reviewing the [README](https://github.com/tschf/atom-build-oracle/blob/master/README.md) of the project - for SQLcl, it is just a matter of going in the plugin settings and setting it to use sqlcl instead of the default sqlplus.
