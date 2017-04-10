@@ -12,6 +12,7 @@ Package                                   | Description
 [`file-icons`](#file-icons)               | Adds file specific icons to atom for improved visualization
 [`atom-aligntment`](#atom-alignment)      | Aligns multiple lines of assignment operators
 [`build-oracle`](#build-oracle)         | Compiles oracle scripts
+[`pigments`](#pigments)                  | Highlights text that refers to a colour, in that colour
 
 ## [project-manager](https://atom.io/packages/project-manager)
 
@@ -250,3 +251,19 @@ With this applied, in the bottom left corner of your screen (in the status bar),
 Alternatively, you can hit the (default) key binding `ctrl+alt+b` to compile against the active build target.
 
 This project depends on SQL*Plus (or SQLcl), so for further set up instructions, it is worth reviewing the [README](https://github.com/tschf/atom-build-oracle/blob/master/README.md) of the project - for SQLcl, it is just a matter of going in the plugin settings and setting it to use sqlcl instead of the default sqlplus.
+
+## [pigments](https://atom.io/packages/pigments)
+
+Pigments will highlight colours in your source code. This can be helpful when using for example hex colour codes, or rgb values, to know what colour is actually being applied.
+
+When dealing with CSS pre-processor's such as less, and colour variables that have been declared will come through in the palette. To show the colours, run the command `show palette`.
+
+![image](https://cloud.githubusercontent.com/assets/1747643/24865237/021c0cac-1e4a-11e7-9c23-0f9e80c01b18.png)
+
+If I have defined a colour as: `@my-var: #123456;` in my `less` file, the palette will show the following:
+
+![image](https://cloud.githubusercontent.com/assets/1747643/24865492/c77bbb50-1e4a-11e7-91ff-35824a047869.png)
+
+Pigments also comes with a command to list all colours defind in the project. Run the command `Find colors`.
+
+![image](https://cloud.githubusercontent.com/assets/1747643/24865564/fa69a0fe-1e4a-11e7-8d68-dc091ad46724.png)
