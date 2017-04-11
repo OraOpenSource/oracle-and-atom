@@ -12,6 +12,7 @@ Package                                   | Description
 [`file-icons`](#file-icons)               | Adds file specific icons to atom for improved visualization
 [`atom-aligntment`](#atom-alignment)      | Aligns multiple lines of assignment operators
 [`build-oracle`](#build-oracle)         | Compiles oracle scripts
+[`script`](#script)                       | Runs scripts
 [`pigments`](#pigments)                  | Highlights text that refers to a colour, in that colour
 
 ## [project-manager](https://atom.io/packages/project-manager)
@@ -251,6 +252,14 @@ With this applied, in the bottom left corner of your screen (in the status bar),
 Alternatively, you can hit the (default) key binding `ctrl+alt+b` to compile against the active build target.
 
 This project depends on SQL*Plus (or SQLcl), so for further set up instructions, it is worth reviewing the [README](https://github.com/tschf/atom-build-oracle/blob/master/README.md) of the project - for SQLcl, it is just a matter of going in the plugin settings and setting it to use sqlcl instead of the default sqlplus.
+
+## [script](https://atom.io/packages/script)
+
+Unlike `build-oracle`, or more succintly, `build`, which typically depends on a build file, script runs the file based on the extension and has support for large number of languages. The keyboard shortcut to run a script defaults to `ctrl+shift+b`.
+
+Suppose you have a JavaScript file you want to quickly run to test out, hit the keyboard shortcut and a little panel at the bottom of the page will show the output/results.
+
+![image](https://cloud.githubusercontent.com/assets/1747643/24910474/43459902-1f0b-11e7-8338-1e71a3482515.png)
 
 ## [pigments](https://atom.io/packages/pigments)
 
