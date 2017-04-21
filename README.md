@@ -11,9 +11,9 @@ Package                                   | Description
 [`minimap`](#minimap)                     | A preview of the full source code and quick scrolling through file
 [`file-icons`](#file-icons)               | Adds file specific icons to atom for improved visualization
 [`atom-aligntment`](#atom-alignment)      | Aligns multiple lines of assignment operators
-[`build-oracle`](#build-oracle)         | Compiles oracle scripts
+[`build-oracle`](#build-oracle)           | Compiles oracle scripts
 [`script`](#script)                       | Runs scripts
-[`pigments`](#pigments)                  | Highlights text that refers to a colour, in that colour
+[`pigments`](#pigments)                   | Highlights text that refers to a colour, in that colour
 
 ## [project-manager](https://atom.io/packages/project-manager)
 
