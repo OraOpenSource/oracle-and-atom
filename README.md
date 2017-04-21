@@ -14,6 +14,7 @@ Package                                   | Description
 [`build-oracle`](#build-oracle)           | Compiles oracle scripts
 [`script`](#script)                       | Runs scripts
 [`pigments`](#pigments)                   | Highlights text that refers to a colour, in that colour
+[`remote-edit`](#remote-edit)             | Highlights text that refers to a colour, in that colour
 
 ## [project-manager](https://atom.io/packages/project-manager)
 
@@ -276,3 +277,23 @@ If I have defined a colour as: `@my-var: #123456;` in my `less` file, the palett
 Pigments also comes with a command to list all colours defind in the project. Run the command `Find colors`.
 
 ![image](https://cloud.githubusercontent.com/assets/1747643/24865564/fa69a0fe-1e4a-11e7-8d68-dc091ad46724.png)
+
+## [remote-edit](https://atom.io/packages/remote-edit)
+
+Remote edit allows editing of files from ftp/sftp.
+
+To set up a new host, open the command palette and search for `remote edit: new host Sftp`
+
+![image](https://cloud.githubusercontent.com/assets/1747643/25269002/37fa98a8-26be-11e7-9490-29a5788e9baf.png)
+
+![image](https://cloud.githubusercontent.com/assets/1747643/25268955/091d142a-26be-11e7-9a56-a9c68861095b.png)
+
+This configuration gets serialised into the default config: `~/.atom/remoteEdit.json` (can be changed through settings)
+
+Once that is set up, you can open those files by opening the `remote-edit` browse dialog - accessed by the command `Remote edit: Browse`. This will bring up a list of saved hosts that you can then browse.
+
+![image](https://cloud.githubusercontent.com/assets/1747643/25269394/c88c5da6-26bf-11e7-8562-3d92031880e4.png)
+
+![image](https://cloud.githubusercontent.com/assets/1747643/25269419/e55a3142-26bf-11e7-84b2-956f6d96d435.png)
+
+One minor issue that I noticed, is that it doesn't show hidden files - and typing them in manually also doesn't load the file.
