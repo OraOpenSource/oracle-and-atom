@@ -15,6 +15,7 @@ Package                                   | Description
 [`script`](#script)                       | Runs scripts
 [`pigments`](#pigments)                   | Highlights text that refers to a colour, in that colour
 [`remote-edit`](#remote-edit)             | Highlights text that refers to a colour, in that colour
+[`color-picker`](#color-picker)           | Gives a colour picker to choose a new colour
 
 ## [project-manager](https://atom.io/packages/project-manager)
 
@@ -297,3 +298,13 @@ Once that is set up, you can open those files by opening the `remote-edit` brows
 ![image](https://cloud.githubusercontent.com/assets/1747643/25269419/e55a3142-26bf-11e7-84b2-956f6d96d435.png)
 
 One minor issue that I noticed, is that it doesn't show hidden files - and typing them in manually also doesn't load the file.
+
+## [color-picker](https://atom.io/packages/color-picker)
+
+Color picker allows you to use a UI to choose a colour you want. There is a default trigger binding of `ctrl+alt+c`. So if you mouse over a colour code in your source file and hit the trigger key, the colour picker will present itself.
+
+![image](https://cloud.githubusercontent.com/assets/1747643/25313111/48312bf2-286b-11e7-8d5e-648a49fe151f.png)
+
+Clicking the big button at the top that displays the colour and also the HEX (or other desired format) code, will either insert or replace the colour value in your source file.
+
+One issue, it won't work with colour names, such as `red`, `green`, `blue`, etc.
