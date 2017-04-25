@@ -17,6 +17,7 @@ Package                                   | Description
 [`remote-edit`](#remote-edit)             | Highlights text that refers to a colour, in that colour
 [`color-picker`](#color-picker)           | Gives a colour picker to choose a new colour
 [`git-plus`](#git-plus)                   | Add basic git commands and feedback icons to Atom
+[`platformio-ide-terminal`](#platformio-ide-terminal)| Terminal emulator in Atom
 
 ## [project-manager](https://atom.io/packages/project-manager)
 
@@ -327,3 +328,30 @@ And many more.
 If you are more of a point-and-click type of person, you can access these commands by right clicking a file in the tree. There will be a menu entry for Git Plus where you can access a sub-set of available commands.
 
 ![image](https://cloud.githubusercontent.com/assets/1747643/25365325/4eeb4374-29ab-11e7-9732-b7de7146ee52.png)
+
+## [platformio-ide-terminal](https://atom.io/packages/platformio-ide-terminal)
+
+A common requirement for developers is to be able to access a terminal from within the editor. Whilst there are a number of packages that come with one implementation or another, in my testing I found this particular one to work best (another popular one being terminal-plus, but unfortunately didn't seem to be working on my Linux based system).
+
+Once installed, you will see a `+` and `x` symbol in the bottom left hand side of your status bar. Clicking on the `+` will open up a new console (you can have more than one).
+
+![image](https://cloud.githubusercontent.com/assets/1747643/25366732/f2d61be0-29b4-11e7-9f82-f808a0445699.png)
+
+![image](https://cloud.githubusercontent.com/assets/1747643/25366745/08e253f4-29b5-11e7-8827-fad01904e01e.png)
+
+One "feature" that I found was that when running `git status`, then changes would come in with a drop shadow which made it difficult to read.
+
+![image](https://cloud.githubusercontent.com/assets/1747643/25366792/5e64136c-29b5-11e7-9b89-f3841b24be42.png)
+
+To get around this, I added the following to my user stylesheet:
+
+```css
+//adapted from: https://github.com/jeremyramin/terminal-plus/issues/124
+.platformio-ide-terminal.terminal-view .xterm > .terminal {
+    text-shadow: none;
+}
+```
+
+After this change, it comes through more readable as:
+
+![image](https://cloud.githubusercontent.com/assets/1747643/25366809/832f5cf6-29b5-11e7-86e6-12d7752cfa02.png)
