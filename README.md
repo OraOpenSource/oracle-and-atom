@@ -16,6 +16,7 @@ Package                                   | Description
 [`pigments`](#pigments)                   | Highlights text that refers to a colour, in that colour
 [`remote-edit`](#remote-edit)             | Highlights text that refers to a colour, in that colour
 [`color-picker`](#color-picker)           | Gives a colour picker to choose a new colour
+[`git-plus`](#git-plus)                   | Add basic git commands and feedback icons to Atom
 
 ## [project-manager](https://atom.io/packages/project-manager)
 
@@ -308,3 +309,21 @@ Color picker allows you to use a UI to choose a colour you want. There is a defa
 Clicking the big button at the top that displays the colour and also the HEX (or other desired format) code, will either insert or replace the colour value in your source file.
 
 One issue, it won't work with colour names, such as `red`, `green`, `blue`, etc.
+
+## [git-plus](https://atom.io/packages/git-plus)
+
+This extension adds commands into the command palette and through context menu's so that you can quickly perform git-operations straight out of your editor.
+
+For example, From the command pallette, you can run:
+
+* `Git Plus: Add` to add the active file
+* `Git Plus: Add and Commit` to add the active file and trigger a commit
+* `Git Plus: Commit` to commit all staged files
+
+And many more.
+
+![image](https://cloud.githubusercontent.com/assets/1747643/25365292/0c2ee112-29ab-11e7-8085-a4953d3f9513.png)
+
+If you are more of a point-and-click type of person, you can access these commands by right clicking a file in the tree. There will be a menu entry for Git Plus where you can access a sub-set of available commands.
+
+![image](https://cloud.githubusercontent.com/assets/1747643/25365325/4eeb4374-29ab-11e7-9732-b7de7146ee52.png)
